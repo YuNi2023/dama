@@ -1,9 +1,41 @@
-<section id="survivor-status">
-  <h2>サバイバー状況</h2>
-  <div id="survivor-list"></div>
-</section>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdentityV ダメージ計算機</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>IdentityV ダメージ計算</h1></header>
+  <main>
+    <!-- サバイバー編成選択 -->
+    <section id="survivor-selection">
+      <h2>サバイバー編成選択</h2>
+      <div id="survivor-checks"></div>
+    </section>
 
-<section id="log">
-  <h2>アクションログ</h2>
-  <ul id="action-log"></ul>
-</section>
+    <!-- ハンター操作 -->
+    <section id="hunter-controls">
+      <h2>ハンター操作</h2>
+      <button data-hunter="joseph" class="attack-btn">ジョゼフ 通常攻撃</button>
+      <button data-hunter="joseph" class="skill-btn">写真世界発動</button>
+      <button data-hunter="hermit" class="attack-btn">隠者 通常攻撃</button>
+      <button data-hunter="hermit" class="skill-btn">極性切替</button>
+    </section>
+
+    <!-- サバイバー状況表示 -->
+    <section id="survivor-status">
+      <h2>サバイバー状況</h2>
+      <div id="survivor-list"></div>
+    </section>
+
+    <!-- アクションログ -->
+    <section id="log">
+      <h2>アクションログ</h2>
+      <ul id="action-log"></ul>
+    </section>
+  </main>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
