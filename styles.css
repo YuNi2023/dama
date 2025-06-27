@@ -1,35 +1,37 @@
 body {
-margin: 0;
-font-family: sans-serif;
+  margin: 0;
+  font-family: sans-serif;
 }
 header, main {
-padding: 1rem;
+  padding: 1rem;
 }
 button {
-margin: 0.5rem;
-padding: 0.8rem 1.2rem;
+  margin: 0.5rem;
+  padding: 0.8rem 1.2rem;
 }
+#survivor-checks,
 #survivor-list {
-display: flex;
-flex-wrap: wrap;
-gap: 0.5rem;
-margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
-.survivor-card {
-border: 1px solid #ccc;
-border-radius: 4px;
-padding: 0.5rem;
-width: 120px;
-text-align: center;
+.survivor-card,
+.survivor-checkbox {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  width: 120px;
+  text-align: center;
 }
 .hp-bar {
-background: #ddd;
-height: 8px;
-margin: 0.5rem 0;
-position: relative;
+  background: #ddd;
+  height: 8px;
+  margin: 0.5rem 0;
+  position: relative;
 }
 .hp-fill {
-background: #4caf50;
-height: 100%;
-width: 100%;
+  background: #4caf50;
+  height: 100%;
+  width: 100%;
 }
