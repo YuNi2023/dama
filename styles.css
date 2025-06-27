@@ -1,0 +1,1 @@
+body { margin: 0; font-family: sans-serif; } header, main { padding: 1rem; } button { margin: 0.5rem; padding: 0.8rem 1.2rem; } #survivor-status { display: flex; flex-wrap: wrap; } .survivor-card { margin: 0.5rem; padding: 0.5rem; border: 1px solid #ccc; border-radius: 4px; width: 120px; }
