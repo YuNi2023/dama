@@ -1,69 +1,20 @@
-{
-  "hunters": {
-    "joseph": {
-      "name": "写真家（ジョゼフ）",
-      "baseDamage": 1.5,
-      "skills": {
-        "photoWorld": {
-          "duration": 60,
-          "effect": "mirrorDamageReflect"
-        }
-      }
-    },
-    "hermit": {
-      "name": "隠者",
-      "baseDamage": 1.2,
-      "skills": {
-        "polarity": {
-          "values": ["positive", "negative"],
-          "shareEffect": true
-        }
-      }
-    }
-  },
-  "survivors": {
-    "doctor": {
-      "name": "医師",
-      "maxHealth": 5,
-      "special": {
-        "medSyringe": { "selfCost": 0.5, "allyHeal": 1.5 },
-        "selfHeal": 0.5
-      }
-    },
-    "perfumer": {
-      "name": "調香師",
-      "maxHealth": 5,
-      "special": {
-        "perfume": { "invincible": true, "duration": 5 }
-      }
-    },
-    "barmaid": {
-      "name": "バーメイド",
-      "maxHealth": 5,
-      "special": {
-        "ale": { "heal": 1.0, "delay": 19, "cancelOnHit": true }
-      }
-    },
-    "psychologist": {
-      "name": "心理学者",
-      "maxHealth": 5,
-      "special": {
-        "emotionTransfer": { "selfDamage": 1.0, "allyHeal": 1.0, "castTime": 7 },
-        "stressRecovery": { "threshold": 1.0, "autoHeal": true }
-      }
-    },
-    "puppetMaster": {
-      "name": "人形師",
-      "maxHealth": 5,
-      "special": {
-        "noHealFromOthers": true,
-        "rescueHeal": 0.5
-      }
-    },
-    "meteorologist": {
-      "name": "気象学者",
-      "maxHealth": 5,
-      "special": {
-        "warmRain": { "calmGainPerSec": 7, "calmMax": 100, "healOnFull": 1.0 }
-      }
-    }
+import { applyHunterAttack, useSkill } from '../logic/damageCalculator.js';
+import characters from '../data/characters.json' assert { type: 'json' };
+
+const state = {
+  hunters: JSON.parse(JSON.stringify(characters.hunters)),
+  survivors: {},
+  polarity: {}
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  initSelection();
+  initStatus();
+  attachEvents();
+});
+
+function initSelection() { /* サバイバー選択UI生成 */ }
+function initStatus() { /* サバイバー状況UI生成 */ }
+function attachEvents() { /* イベント設定 */ }
+function updateStatus(id) { /* HP更新とダウン判定 */ }
+function logAction(message) { /* ログ出力 */ }
